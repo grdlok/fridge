@@ -5,21 +5,19 @@ import { HttpModule } from '@angular/http';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import {
-  AgmCoreModule
-} from 'angular2-google-maps/core';
+import { MapModule} from './map/map.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    AgmCoreModule.forRoot({
-      apiKey: environment.apiKey
-    }),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MapModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

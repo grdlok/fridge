@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { MapModule} from './map/map.module';
 import { AppRoutingModule } from './app-routing.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpModule,
     MapModule,
-    AppRoutingModule
+    AppRoutingModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

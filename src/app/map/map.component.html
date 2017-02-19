@@ -1,3 +1,12 @@
-<sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="12">
+  <div *ngFor="let node of nodes">
+    <sebm-google-map-marker [latitude]="node.lat" [longitude]="node.lon">
+      <sebm-google-map-info-window [disableAutoPan]="true">
+         <span><h3>{{node.locationName}}</h3></span><br>
+         <span>{{node.address}}</span><br>
+         <span>{{node.phone}}</span><br>
+         <span>{{node.notes}}</span>
+       </sebm-google-map-info-window>
+    </sebm-google-map-marker>
+  </div>
 </sebm-google-map>

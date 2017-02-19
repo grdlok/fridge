@@ -4,7 +4,6 @@ import { MapComponent }    from './map.component';
 import { MapService } from './shared/map.service'
 
 const MapRoutes: Routes = [
-  { path: '',  redirectTo: 'map', pathMatch: 'full' },
   { path: 'map',  component: MapComponent }
 ];
 @NgModule({

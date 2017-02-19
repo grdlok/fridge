@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MapService} from './shared/map.service'
+import { MapService } from './shared/map.service';
+import { MapInterface } from './shared/map.interface';
 
 @Component({
   selector: 'app-map',
@@ -8,15 +9,13 @@ import {MapService} from './shared/map.service'
 })
 export class MapComponent implements OnInit {
 
-  lat: number = 43.786126;
-  lng: number = -79.291554;
+  lat: number = 43.6532;
+  lng: number = -79.3832;
+  nodes: MapInterface[];
 
   constructor(private ms: MapService) { }
 
   ngOnInit() {
-    this.ms.getLocations().subscribe( (res) => {
-      console.log(res)
-    });
+    this.ms.getLocations().subscribe((res) => { this.nodes = res});
   }
-
-}
+} 

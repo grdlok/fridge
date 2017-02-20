@@ -35,6 +35,9 @@ export class MapService {
 
   private extractData(res: Response): Observable<MapInterface[]> {
     let body = res.json();
+    for (let item of body) {
+      item.open = false;
+    }
     return body || { };
   }
   private handleError (error: Response | any) {

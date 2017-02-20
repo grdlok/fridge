@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapComponent } from './map.component';
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule, SebmGoogleMapMarker } from 'angular2-google-maps/core';
 import { MapRoutingModule } from './map-routing.module';
 import { environment } from '../../environments/environment';
 import { JsonpModule } from "@angular/http"
@@ -16,6 +16,7 @@ import { JsonpModule } from "@angular/http"
       apiKey: environment.apiKey
     }),
   ],
-  declarations: [MapComponent]
+  declarations: [MapComponent],
+  providers: []
 })
 export class MapModule { }

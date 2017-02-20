@@ -6,7 +6,8 @@ export interface MapInterface {
     locationName: string; 
     address: string;
     phone:string;
-    notes: string,
+    notes: string;
     lat: number;
-    lon: number
+    lon: number;
+    open: boolean;
 }

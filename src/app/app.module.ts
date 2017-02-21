@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { MapModule} from './map/map.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { FridgeComponent } from './fridge/fridge.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FridgeComponent
   ],
   imports: [
     BrowserModule,

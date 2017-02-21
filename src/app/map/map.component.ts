@@ -10,24 +10,23 @@ import { SebmGoogleMapMarker } from 'angular2-google-maps/core';
 })
 export class MapComponent implements OnInit {
 
-  lat: number = 43.6532;
-  lng: number = -79.3832;
+  lat = 43.6532;
+  lng = -79.3832;
   nodes: MapInterface[];
   selectedMarker: number;
 
   constructor(private ms: MapService) { }
 
   ngOnInit() {
-    this.ms.getLocations().subscribe((res) => { this.nodes = res; 
-                                                this.nodes.forEach((i) => i.open = false);});
+    this.ms.getLocations().subscribe((res) => { this.nodes = res;
+                                                this.nodes.forEach( (i) => i.open = false); });
   }
 
   clickedMarker(marker: number) {
-    if (this.selectedMarker !== undefined) { 
+    if (this.selectedMarker !== undefined) {
       this.nodes[this.selectedMarker].open = false;
     }
     this.selectedMarker = marker;
     this.nodes[marker].open = true;
   }
-} 
- 
+}

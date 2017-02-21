@@ -4,7 +4,7 @@ import { MapComponent } from './map.component';
 import { AgmCoreModule, SebmGoogleMapMarker } from 'angular2-google-maps/core';
 import { MapRoutingModule } from './map-routing.module';
 import { environment } from '../../environments/environment';
-import { JsonpModule } from "@angular/http"
+import { JsonpModule } from '@angular/http';
 
 
 @NgModule({

@@ -20,7 +20,7 @@ import { FridgeComponent } from './fridge/fridge.component';
     FormsModule,
     HttpModule,
     MapModule,
-    AppRoutingModule  
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

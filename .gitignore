@@ -4,6 +4,8 @@
 /dist
 /tmp
 
+/src/environments
+
 # dependencies
 /node_modules
 
@@ -14,6 +16,7 @@
 .c9/
 *.launch
 .settings/
+.vscode/
 
 # IDE - VSCode
 .vscode/*
@@ -38,3 +41,5 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+proxy.config.json
